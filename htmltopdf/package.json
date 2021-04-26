@@ -1,0 +1,28 @@
+{
+  "name": "htmltopdf",
+  "version": "1.0.0",
+  "description": "",
+  "main": "pdfGenerator.js",
+  "scripts": {
+    "test": "pm2 start pdfGenerator.js",
+    "stop-test": "pm2 stop pdfGenerator.js && pm2 delete pdfGenerator",
+    "dev": "node pdfGenerator.js",
+    "prod": "SET NODE_ENV=prod & pm2 start pdfGenerator.js",
+    "deep-prod": "SET NODE_ENV=prod & node pdfGenerator.js",
+    "stop-prod": "pm2 stop pdfGenerator.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.5.5",
+    "cluster": "^0.7.7",
+    "cluster-readwrite-lock": "^1.0.1",
+    "ejs": "^2.6.2",
+    "html-pdf": "^2.2.0",
+    "mustache": "^3.0.1",
+    "pm2": "^3.5.1",
+    "thread-sleep": "^2.2.0",
+    "windows-network-drive": "^3.0.0",
+    "winston": "^3.2.1"
+  }
+}

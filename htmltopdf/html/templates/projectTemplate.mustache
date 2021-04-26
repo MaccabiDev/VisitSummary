@@ -1,0 +1,85 @@
+
+<html>
+    <head>
+        <title>כותרת הדף</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body style="font-family:arial;  margin:auto;">
+        <div style="width:90%; margin:auto">
+            <div style="direction:rtl; font-size:x-large; margin-bottom:25px;">
+                <div>ד"ר {{operator_name}}, {{specialization}}</div>
+                <div>{{clinic_name}}</div>
+                <div>מספר טלפון: {{clinic_phone}}</div>
+            </div>
+
+            <div style="text-align:center; font-size:x-large; color:DarkBlue; margin-bottom:25px;" >
+                <div >סיכום ביקור מספר: {{visit_Number}}</div>
+                <div style="font-weight:bold;">תאריך ביקור: {{visit_date}}</div>                
+            </div>
+
+            <div style="text-align:center; position:relative; font-size:medium; margin-bottom:35px; ">
+                <p  style="background-color:white; position:absolute; padding:5px; top:-30px; right:-10px;">פרטי המטופל</p>
+                <table align="center" style="direction:rtl; width:100%; padding:20px; border:1px solid DarkBlue;">
+                    <tr>
+                        <td><div>שם משפחה: {{last_name}}</div></td>
+                        <td></td>
+                        <td><div>שם פרטי: {{first_name}}</div></td>
+                        <td><div>ת.ז: {{patient_id}}</div></td>
+                    </tr>
+                    <tr>
+                        
+                        <td><div>ת. לידה: {{birth_date}}</div></td>
+                        <td><div>מין: {{gender}}</div></td>
+                        <td><div>טלפון: {{phone}}</div></td>
+                        <td><div>טלפון נוסף: {{mobile}}</div></td>
+                    </tr>
+                    <tr>
+                        
+                        <td><div>כתובת: {{address}}</div></td>
+                        <td></td>
+                        <td></td>
+                        <td><div>מיקוד: {{postal}}</div></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div >
+                <h2 style="padding-top:5px; padding-bottom:5px;   color:DarkBlue; background-color:LightGrey; direction:rtl">אבחנות:</h2>
+                <ul>
+                    {{#diagnosis}}
+                    <li>{{name}}</li>
+                    {{/diagnosis}}
+                </ul>
+
+                <h2 style="padding-top:5px; padding-bottom:5px;   color:DarkBlue; background-color:LightGrey; direction:rtl">המלצות למטופל:</h2>
+                <div style="direction:rtl">הכנס המלצות</div>
+
+                <h2 style="padding-top:5px; padding-bottom:5px;  color:DarkBlue; background-color:LightGrey; direction:rtl">טיפול:</h2>
+                <ul>
+                    {{#diagnosis}}
+                    <li>{{name}}</li>
+                    {{/diagnosis}}
+                </ul>
+
+                <h2 style="padding-top:5px; padding-bottom:5px;  color:DarkBlue; background-color:LightGrey; direction:rtl">הפניות ואישורים:</h2>
+                <ul style="direction:rtl">
+                    {{#diagnosis}}
+                    <li>{{name}}</li>
+                    {{/diagnosis}}
+                </ul>
+
+                <h2 style="padding-top:5px; padding-bottom:5px;   color:DarkBlue; background-color:LightGrey; direction:rtl">תרופות:</h2>
+                <ul>
+                    {{#diagnosis}}
+                    <li>{{name}}</li>
+                    {{/diagnosis}}
+                </ul>
+            </div>
+        </div>
+        <div style="display:none">
+            <img  src="images/Maccabi.PNG">
+            <img style="width:100%" src="images/Maccabi_footer.PNG">
+        </div>
+
+    </body>
+</html>
